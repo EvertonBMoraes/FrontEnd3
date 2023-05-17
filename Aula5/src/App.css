@@ -13,3 +13,9 @@ h1 {
   color: azure;
   font-size: 100px;
 }
+
+.itens {
+  color: azure;
+  background-color: red;
+  font-size: 40px;
+}
