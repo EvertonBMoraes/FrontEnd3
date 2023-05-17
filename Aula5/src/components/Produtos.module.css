@@ -1,0 +1,13 @@
+.itens {
+    background-color: rgb(13, 51, 102);
+}
+
+.nomes{
+    color: azure;
+    font-size: 50px;
+}
+
+.img{
+    height: 400px;
+    width: 500px;
+}
