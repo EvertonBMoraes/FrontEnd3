@@ -19,4 +19,24 @@ export const listaProdutos = [
       image: "https://m.media-amazon.com/images/I/51RXeqMLceL._AC_SL1500_.jpg",
       preco: "R$ 1599.00",
     },
+    {
+      nome: "Novo 1",
+      image: "https://m.media-amazon.com/images/I/51RXeqMLceL._AC_SL1500_.jpg",
+      preco: "R$ 999.99",
+    },
+    {
+      nome: "Novo 2",
+      image: "https://m.media-amazon.com/images/I/51RXeqMLceL._AC_SL1500_.jpg",
+      preco: "R$ 999.99",
+    },
+    {
+      nome: "Novo 3",
+      image: "https://m.media-amazon.com/images/I/51RXeqMLceL._AC_SL1500_.jpg",
+      preco: "R$ 999.99",
+    },
+    {
+      nome: "Novo 4",
+      image: "https://m.media-amazon.com/images/I/51RXeqMLceL._AC_SL1500_.jpg",
+      preco: "R$ 999.99",
+    },
   ];

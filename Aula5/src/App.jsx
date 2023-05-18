@@ -4,8 +4,10 @@ import './App.css'
 function App() {
   return (
   <>
+  <h1>Produtos</h1>
   <p className="itens">Incríveis Descontos</p>
-  <Produtos />
+  <Produtos
+   />
   </>)
 }
 

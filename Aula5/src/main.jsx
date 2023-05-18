@@ -4,7 +4,6 @@ import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <h1>Produtos</h1>
     <App />
   </>
 );
