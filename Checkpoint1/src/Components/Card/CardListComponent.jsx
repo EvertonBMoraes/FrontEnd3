@@ -2,7 +2,7 @@ import style from "./CardListComponent.module.css";
 
 function CardListComponent(props) {
   return (
-  <div className={style.div}>
+  <div id="cardContainer" className={style.div}>
     {props.children}
     </div>
   )

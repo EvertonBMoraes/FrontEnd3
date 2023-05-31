@@ -7,7 +7,6 @@ import CardListComponent from "./Components/Card/CardListComponent";
 function App() {
   const [title, setTitle] = useState("");
   const [imgUrl, setImgUrl] = useState("");
-  // const [card, setCard] = useState({});
   const [cardList, setCardList] = useState([]);
 
   const handleChangeTitle = (event) => {
@@ -18,8 +17,13 @@ function App() {
     setImgUrl(event.target.value);
   };
 
+  const regex = /[0-9]/;
+  const mensagemErro = "Por favor, verifique os dados inseridos no formulário!"
+
   const handleButtonClick = (event) => {
     event.preventDefault();
+    document.getElementById("mensagem_erro").innerText = ""
+    if (title.length>=3 && imgUrl.length>=6 && regex.test(imgUrl)) {
     setCardList([
       ...cardList,
       {
@@ -27,13 +31,26 @@ function App() {
         imgUrl: imgUrl,
       },
     ]);
+    setTitle("")
+    setImgUrl("")
+    document.getElementById("exemplo").innerText = ""
+    } else{
+    document.getElementById("mensagem_erro").innerText = mensagemErro
+    }
+  };
+
+  const handleButtonClickLimpar = (event) => {
+    event.preventDefault();
+    document.getElementById("mensagem_erro").innerText = ""
+    document.getElementById("cardContainer").innerHTML = ""
+    setTitle("")
+    setImgUrl("")
   };
 
   return (
     <>
       <h1>Cards de Yu-Gui-Oh!</h1>
       <h3>by Everton Moraes</h3>
-
       <form>
         <InputComponent
           title="Nome do Card"
@@ -49,7 +66,9 @@ function App() {
           fnOnChange={handleChangeImgUrl}
         />
 
-        <button onClick={handleButtonClick}>Salvar</button>
+        <button onClick={handleButtonClick}>Enviar</button>
+        <button onClick={handleButtonClickLimpar}>Limpar</button>
+        <p id="mensagem_erro"></p>
       </form>
       <CardListComponent>
         {cardList.map((card) => {
@@ -59,6 +78,9 @@ function App() {
           imgUrl={card.imgUrl} />;
         })}
       </CardListComponent>
+      <div id="exemplo">Ex: <br />
+        Summoned Skull <br />
+        https://ms.yugipedia.com//thumb/b/bc/SummonedSkull-MRD-EN-UR-UE-25thAnniversaryEdition.png/300px-SummonedSkull-MRD-EN-UR-UE-25thAnniversaryEdition.png</div>
     </>
   );
 }

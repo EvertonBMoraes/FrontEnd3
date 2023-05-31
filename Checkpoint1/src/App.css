@@ -11,3 +11,9 @@ button {
   margin: 10px;
   background-color:aliceblue
 }
+
+#mensagem_erro{
+  color: red;
+  font-size: larger;
+  font-weight: bold;
+}
