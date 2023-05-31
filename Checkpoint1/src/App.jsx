@@ -20,14 +20,15 @@ function App() {
   const regex = /[0-9]/;
   const mensagemErro = "Por favor, verifique os dados inseridos no formulário!"
 
+  console.log(title.trim());
   const handleButtonClick = (event) => {
     event.preventDefault();
     document.getElementById("mensagem_erro").innerText = ""
-    if (title.length>=3 && imgUrl.length>=6 && regex.test(imgUrl)) {
+    if (title.trim().length>=3 && imgUrl.length>=6 && regex.test(imgUrl)) {
     setCardList([
       ...cardList,
       {
-        title: title,
+        title: title.trim(),
         imgUrl: imgUrl,
       },
     ]);
