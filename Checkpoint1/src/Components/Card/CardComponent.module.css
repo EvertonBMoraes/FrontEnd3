@@ -1,0 +1,17 @@
+.img {
+  width: 100%;
+  border-radius: 1%;
+  margin: 0px;
+  width: 200px;
+  height: 300px;
+}
+
+.div {
+  margin: 10px;
+}
+
+.title {
+  font-size: 25pt;
+  color: rgb(245, 245, 245);
+  font-weight: 500;
+}

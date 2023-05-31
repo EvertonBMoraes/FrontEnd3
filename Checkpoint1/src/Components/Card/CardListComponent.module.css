@@ -1,0 +1,8 @@
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    direction: rtl;
+    /* background-color: rgba(0, 0, 0, 0.763); */
+}
